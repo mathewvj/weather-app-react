@@ -1,0 +1,207 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top right, #83a4d4, #b6fbff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.container {
+  margin: 40px 0;
+  background-color: #ffffffdd;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Headline */
+.container h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Search box */
+.search-box {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.search-box input {
+  padding: 10px 14px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: -100%; /* position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.input-location-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-location-wrapper input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-location-wrapper .location-btn {
+  padding: 8px 10px;
+  background-color: #3a86ff;
+  color: white;
+  border: 1px solid #3a86ff;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  height: 100%;
+}
+
+.input-location-wrapper .location-btn:hover {
+  background-color: #265dd6;
+}
+
+
+/* Suggestion list */
+.suggesstion-list {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.892);
+  color: black;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 160px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggesstion-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.suggesstion-list li:hover {
+  background-color: #464545;
+  color: white;
+}
+
+/* Weather Card */
+.weather-card {
+  background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: #222;
+  animation: slideUp 0.6s ease-out;
+  margin-top: 1rem;
+}
+
+.weather-card img {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-card p {
+  margin: 0.3rem 0;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Buttons */
+.get-weather-btn button {
+  margin-top: 5px;
+  padding: 10px 16px;
+  background-color: #3a86ff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #265dd6;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .weather-card {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
