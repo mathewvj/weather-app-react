@@ -1,4 +1,3 @@
-/* Reset and base styles */
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +9,6 @@ body {
   justify-content: center;
 }
 
-/* Main container */
 .container {
   margin: 40px 0;
   background-color: #ffffffdd;
@@ -23,13 +21,12 @@ body {
   animation: fadeIn 1s ease-in;
 }
 
-/* Headline */
 .container h1 {
   margin-bottom: 1rem;
+  font-style: italic;
   color: #333;
 }
 
-/* Search box */
 .search-box {
   position: relative;
   margin-bottom: 1rem;
@@ -58,7 +55,7 @@ body {
   padding: 6px;
   position: absolute;
   z-index: 1;
-  bottom: -100%; /* position above the button */
+  bottom: -100%; 
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -89,9 +86,9 @@ body {
 
 .input-location-wrapper .location-btn {
   padding: 8px 10px;
-  background-color: #3a86ff;
+  background-color: #ff00002d;
   color: white;
-  border: 1px solid #3a86ff;
+  border: 1px solid #090909;
   border-left: none;
   border-radius: 0 8px 8px 0;
   cursor: pointer;
@@ -100,11 +97,9 @@ body {
 }
 
 .input-location-wrapper .location-btn:hover {
-  background-color: #265dd6;
+  background-color: #b9cdf7;
 }
 
-
-/* Suggestion list */
 .suggesstion-list {
   position: absolute;
   top: 90%;
@@ -135,9 +130,8 @@ body {
   color: white;
 }
 
-/* Weather Card */
 .weather-card {
-  background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+  background: linear-gradient(to bottom right, #fddea1, #84d8ff);
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -157,11 +151,10 @@ body {
   font-style: italic;
 }
 
-/* Buttons */
 .get-weather-btn button {
   margin-top: 5px;
   padding: 10px 16px;
-  background-color: #3a86ff;
+  background-color: #ff4525b0;
   border: none;
   color: white;
   font-size: 1rem;
@@ -171,10 +164,9 @@ body {
 }
 
 button:hover {
-  background-color: #265dd6;
+  background-color: #3f7cfec0;
 }
 
-/* Animation keyframes */
 @keyframes fadeIn {
   from { opacity: 0 }
   to { opacity: 1 }
@@ -191,7 +183,6 @@ button:hover {
   }
 }
 
-/* Responsive design */
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem;

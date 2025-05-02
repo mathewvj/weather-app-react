@@ -84,7 +84,7 @@ function App() {
   return (
 
     <div className="container">
-      <h1>Weather App</h1>
+      <h1>Weather App⛅</h1>
       <div>
       <div className="search-box">
       <div className="input-location-wrapper">
@@ -156,10 +156,10 @@ function App() {
             <h2>{weather.name}, {weather.sys.country}</h2>
             <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
             <p>{weather.weather[0].main}</p>
-            <p>TEMPERATURE: {weather.main.temp}°C</p>
-            <p>FEELS LIKE: {weather.main.feels_like}°C</p>
-            <p>HUMIDITY: {weather.main.humidity}%</p>
-            <p>WIND SPEED: {weather.wind.speed} m/s</p>
+            <p>Temperature: {weather.main.temp}°C</p>
+            <p>Feels Like: {weather.main.feels_like}°C</p>
+            <p>Humidity: {weather.main.humidity}%</p>
+            <p>Wind Speed: {weather.wind.speed} m/s</p>
           </div>
         )
       }
